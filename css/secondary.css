@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'Gothic';
+    src: url('../assets/fonts/Gothic-Joker.ttf');
+}
+
+.container-secondary {
+    position: relative;
+    display: flex;
+    width: 95%;
+    height: 95%;
+    background-image: url('../assets/img/CoringaFoda.jpg');
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.container-secondary .navbar-second {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+}
+
+.navbar-second {
+    position: relative;
+    top: 3em;
+    z-index: 9999;
+}
+
+.navbar-second  ul {
+    display: flex;
+    transform: translateY(50%);
+    justify-content: center;
+}
+
+.navbar-second ul li {
+    padding-right: 10em;
+    list-style: none;
+    cursor: pointer;
+}
+
+.navbar-second li a {
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar-second li a:hover {
+    color:#991cff;
+}
+
+.second-content {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#content-primary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+
+}
+
+#content-secondary {
+    width: 50%;
+    height: 100%;
+}
+
+#dc {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    margin: 15px 15px;
+}
+
+#avengersIcon {
+    position: absolute;
+    top: 700px;
+    cursor: auto;
+}
+
+#jokerHeader {
+    font-family: 'Gothic';
+}
+
+#jokerSubHeader {
+    font-family: 'Gothic';
+    color: #433098;
+}
+
+.footer-container {
+    position: absolute;
+    bottom: -1em;
+    left: 0%;
+    width: 100%;
+}
+
+#Log-in {
+  padding: 1em 3em;
+  font-size: 12pt;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  left: 1500px;
+  top: 2em;
+  z-index: 0;
+  border-radius: 5px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: 'Gothic';
+  letter-spacing: 2px;
+}
+
+#Log-in:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0077,
+    #ff0095,
+    #f700ff,
+    #8c00ff,
+    #a463fa,
+    #002bff,
+    #7a00ff,
+    #6c1ffc,
+    #0e4bf1
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#Log-in:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+}
+
+#sinopHeader {
+    color: #a463fa;
+}

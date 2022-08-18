@@ -1,0 +1,354 @@
+@font-face {
+    font-family: 'fortnite';
+    src: url('../assets/fonts/fortnite.otf');
+}
+:root {
+    --bg-color:#ff98cb;
+    --bg-color2:#9b4fff;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    filter: contrast(1.25);
+
+}
+
+.bus {
+    position: absolute;
+    transform: translateX(-1500%);
+    animation: ride 7s linear forwards;
+}
+
+@keyframes ride {
+    from {
+        transform: translateX(-150%);
+    }to {
+        transform: translateX(200%);
+    }
+}
+.rainbow-loader {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    z-index: 9999999999999;
+    width: 10em;
+    height: 1rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    background: linear-gradient(
+      90deg,
+      orange,
+      yellow,
+      rgb(150, 105, 255),
+      rgb(89, 54, 245),
+      violet,
+      magenta,
+      red,
+      orange,
+      yellow,
+      rgb(140, 0, 255),
+      rgb(97, 3, 173),
+      violet,
+      magenta,
+      red,
+      orange
+    );
+    background-size: 200%;
+    animation-name: RainbowLoaderAnimation;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+  }
+  @keyframes RainbowLoaderAnimation {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+
+.rainbow-loader span {
+    position: absolute;
+    bottom: -22px;
+    left: 2px;
+    font-family: 'fortnite';
+    letter-spacing: 2px;
+    text-shadow: 1px 1px black;
+    color: #fff;
+}
+.container {
+    position: relative;
+    display: flex;
+    width: 95%;
+    height: 95%;
+    background: url('../assets/img/Chapter3.jpg');
+    border-radius: 10px;
+    transform: translateY(-1rem);
+    animation: slideDown 0.5s forwards;
+    opacity: 0;
+}
+
+@keyframes  slideDown  {
+    from {
+        transform: translateY(-1rem);
+        opacity: 0;
+    }to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.container .navbar {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+}
+.navbar {
+    z-index: 9999;
+}
+.navbar ul {
+    display: flex;
+    transform: translateY(50%);
+    justify-content: center;
+}
+
+.navbar ul li {
+    padding-right: 10em;
+    list-style: none;
+    cursor: pointer;
+}
+
+.navbar li a {
+    color: white;
+    text-transform: uppercase;
+}
+.navbar li a:hover {
+    color:#313131;
+}
+.main-content {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+#content2 {
+    width: 50%;
+    height: 100%;
+}
+
+
+.title {
+    position: absolute;
+    font-family: 'fortnite';
+    z-index: 9999;
+    color: #f42b3b;
+    text-shadow: 2px 2px black;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 150pt;
+    top: 5%;
+    left: 5%;
+}
+
+h2 {
+    font-size: 70pt;
+    top: 30%;
+    left: 15%;
+}
+
+.sinopse-header {
+    font-size: 24pt;
+    font-weight: 800;
+    color: #008dce;
+    text-shadow: 2px 2px black;
+    margin-top: 30%;
+    font-family: 'fortnite';
+    letter-spacing: 2px;
+}
+
+.sinopse-spider {
+    font-size: 16pt;
+    font-family: 'fortnite';
+    letter-spacing: 2px;
+    padding-bottom: 4em;
+    color: rgb(255, 255, 255);
+    text-indent: 15%;
+    text-align: center;
+    line-height: 2em;
+    text-shadow: 2px 2px black;
+
+}
+
+#lhama {
+   position: absolute;
+   top: 70%;
+}
+.btn {
+    font-family: 'Poppins';
+    outline: none;
+    border: none;
+    text-shadow: 2px 2px black;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 10pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    z-index: 9999;
+}
+.buttons {
+    z-index: 9999;
+}
+#download {
+    background-color: transparent;
+    transition: 0.5s;
+}
+#download:hover {
+    background:#f42b3b;
+}
+
+#getStarted {
+    position: relative;
+    background:linear-gradient(to right, #f42b3b 20% , #008dce 100% );
+    box-shadow:  0px 0px 40px #000000;
+}
+
+#getStarted::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    width: 90%;
+    background-color: #000000;
+}
+
+.spider {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+
+}
+
+#light {
+    position: absolute;
+    top: 70%;
+    left: -13%;
+    width: 40%;
+    height: 40%;
+    mix-blend-mode: screen;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {
+    h1 {
+        font-size: 100pt;
+        top: 10%;
+        left: 10%;
+    }
+
+    .sinopse-header {
+        font-size: 24pt;
+        font-weight: 800;
+        color: #008dce;
+        text-shadow: 2px 2px black;
+        margin-top: 55%;
+        font-family: 'Gothic';
+        letter-spacing: 2px;
+    }
+
+    .sinopse-spider{
+        font-size: 13pt;
+        font-family: 'fortnite';
+        letter-spacing: 2px;
+        padding-bottom: 4em;
+        color: rgb(255, 255, 255);
+        text-indent: 15%;
+        text-align: center;
+        line-height: 2em;
+        text-shadow: 2px 2px black;
+        text-transform: uppercase;
+    }
+
+    #anime {
+        position: absolute;
+        right: -45%;
+    }
+}
+
+.third-footer {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 1.9em;
+    left: -0.5%;
+    width: 100%;
+    height: 20px;
+}
+
+.third-footer img {
+    width: 200px;
+    height: 50px;
+}
+
+#fortBottomLogo {
+    width:100px;
+    height: 50px;
+}
+
+.arrows {
+    display: flex;
+
+}
+.bi {
+    font-size: 50pt;
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+}
+
+.bi-arrow-left-short {
+    left: 0;
+}
+
+.bi-arrow-right-short {
+    right: 0;
+    color: rgb(248, 213, 99);
+}
